@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         CI = 'true'
+        SIC = 'true'
     }
 
     stages {
@@ -16,9 +17,9 @@ pipeline {
             steps {
                 // Ensure script is executable and then run it
                 bat '''
-                    "C:\\Program Files\\Git\\bin\\bash.exe" -c \"
-                    chmod +x ./jenkins/scripts/test.sh &&
-                    ./jenkins/scripts/test.sh\"
+                    "C:\\Program Files\\Git\\bin\\bash.exe" -c "
+                    chmod +x ./jenkins/scripts/test.sh && 
+                    ./jenkins/scripts/test.sh"
                 '''
             }
         }
